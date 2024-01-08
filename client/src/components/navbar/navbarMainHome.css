@@ -1,0 +1,182 @@
+*::before {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.bestowal_navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--navbar-background);
+  border-bottom: 1px solid var(--navbar-box-shadow);
+  padding: 1rem 2rem;
+  /* position: sticky;
+    top: 0;
+    z-index: 999;
+    margin: 0; */
+  transition: all 400ms ease;
+  -webkit-transition: all 400ms ease;
+  -moz-transition: all 400ms ease;
+  -ms-transition: all 400ms ease;
+  -o-transition: all 400ms ease;
+}
+.bestowal_navbar .bestowal_logo {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+.bestowal_navbar .bestowals-logo a {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  gap: 5px;
+  color: var(--navbar-logo);
+}
+
+.bestowal_navbar .bestowals-logo span {
+  display: flex;
+  align-items: center;
+  padding: 6px;
+  background-color: var(--navbar-logo-span-bg);
+  color: var(--navbar-logo-span-text);
+  height: 1.7rem;
+  font-weight: 700;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+}
+
+.bestowal_navbar .bestowal-Features {
+  display: flex;
+  /* align-items: center; */
+  gap: 1rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--navbar-text-color);
+}
+
+.bestowal_navbar .bestowal-Features a span {
+  display: none;
+}
+
+.bestowal_navbar .themeMode {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.bestowal_navbar .themeMode .sunIcon {
+  color: var(--theme-Icon);
+  cursor: pointer;
+  font-size: 1rem;
+  transition: transform 0.3s ease;
+  font-weight: 700;
+}
+.bestowal_navbar .themeMode .sunIcon:hover {
+  transform: translateY(-5px);
+  -webkit-transform: translateY(-5px);
+  -moz-transform: translateY(-5px);
+  -ms-transform: translateY(-5px);
+  -o-transform: translateY(-5px);
+}
+
+.bestowal_navbar .nav_toggler div {
+  width: 2rem;
+  height: 0.1rem;
+  margin: 0.4rem;
+  background: var(--nav-toggler);
+  transition: all 400ms ease;
+  -webkit-transition: all 400ms ease;
+  -moz-transition: all 400ms ease;
+  -ms-transition: all 400ms ease;
+  -o-transition: all 400ms ease;
+}
+
+.bestowal_navbar .nav_toggler {
+  display: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 900px) {
+  .bestowal_navbar .nav_toggler {
+    display: block;
+  }
+  .bestowal_navbar {
+    padding: 1.8rem 2rem;
+  }
+  .bestowal-Features {
+    position: fixed;
+    top: 11vh;
+    right: 0;
+    width: 50%;
+    height: 51vh;
+    background: var(--navbar-background);
+    flex-direction: column;
+    transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    -o-transform: translateX(100%);
+    transition: all 400ms ease;
+    -webkit-transition: all 400ms ease;
+    -moz-transition: all 400ms ease;
+    -ms-transition: all 400ms ease;
+    -o-transition: all 400ms ease;
+    padding-left: 8px;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+    
+  }
+  
+  .bestowal_navbar .bestowal-Features a {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 2rem;
+    font-size: 1.3rem;
+  }
+  .bestowal_navbar .bestowal-Features a span {
+    display: flex;
+    padding-right: 18px;
+    font-size: 2rem;
+
+  }
+}
+
+/* Nav Active Class */
+
+.nav_active {
+  transform: translateX(0);
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-4px, 6px);
+  -webkit-transform: rotate(-45deg) translate(-4px, 6px);
+  -moz-transform: rotate(-45deg) translate(-4px, 6px);
+  -ms-transform: rotate(-45deg) translate(-4px, 6px);
+  -o-transform: rotate(-45deg) translate(-4px, 6px);
+}
+.toggle .line2 {
+  opacity: 0;
+}
+.toggle .line3 {
+  transform: rotate(45deg) translate(-4px, -6px);
+  -webkit-transform: rotate(45deg) translate(-4px, -6px);
+  -moz-transform: rotate(45deg) translate(-4px, -6px);
+  -ms-transform: rotate(45deg) translate(-4px, -6px);
+  -o-transform: rotate(45deg) translate(-4px, -6px);
+}
+@media screen and (max-width: 527px) {
+  .bestowal-Features {
+    position: fixed;
+    top: 11vh;
+    right: 0;
+    width: 100%;
+    height: 65vh; 
+  }
+}
