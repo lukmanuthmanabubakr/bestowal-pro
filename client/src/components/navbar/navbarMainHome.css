@@ -8,17 +8,17 @@
   justify-content: space-between;
   align-items: center;
   background: var(--navbar-background);
-  border-bottom: 1px solid var(--navbar-box-shadow);
   padding: 1rem 2rem;
-  /* position: sticky;
+  position: sticky;
     top: 0;
     z-index: 999;
-    margin: 0; */
+    margin: 0;
   transition: all 400ms ease;
   -webkit-transition: all 400ms ease;
   -moz-transition: all 400ms ease;
   -ms-transition: all 400ms ease;
   -o-transition: all 400ms ease;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
 .bestowal_navbar .bestowal_logo {
   display: flex;
@@ -128,6 +128,9 @@
   .bestowal_navbar .nav_toggler {
     display: block;
   }
+  .bestowal_navbar .bestowals-logo a {
+    padding-left: -12px;
+  }
   .bestowal_navbar {
     padding: 1.8rem 2rem;
   }
@@ -141,11 +144,13 @@
   }
   .bestowal-Features {
     position: fixed;
-    top: 8vh;
+    top: 7vh;
     right: 0;
     width: 50%;
-    height: 56vh;
-    background: var(--navbar-background);
+    height: 35vh;
+    overflow: auto;
+    background: red;
+    /* background: var(--navbar-background); */
     flex-direction: column;
     transform: translateX(100%);
     -webkit-transform: translateX(100%);
@@ -290,13 +295,17 @@
 @media (width: 375px) {
   .bestowal-Features {
     position: fixed;
-    top: 6vh;
+    top: 8vh;
     right: 0;
     width: 100%;
-    height: 67vh; 
+    height: 54vh; 
+    overflow: auto;
   }
   .bestowal_navbar {
-    padding: 15px 1rem;
+    padding: 20px 1rem;
+  }
+  .bestowal_navbar .bestowals-logo span {
+    margin-right: -2px;
   }
 }
 @media (width: 384px) {
@@ -318,13 +327,27 @@
     top: 8vh;
     right: 0;
     width: 100%;
-    height: 69vh; 
+    height: 59vh; 
+    overflow: auto;
   }
   .bestowal_navbar {
     padding: 15px 1rem;
   }
 }
-@media screen and (max-width: 320px) {
+
+@media (width: 320px) {
+  .bestowal-Features {
+    position: fixed;
+    top: 7vh;
+    right: 0;
+    width: 100%;
+    height: 67vh; 
+    overflow: auto;
+    padding-bottom: 8px;
+    overflow: auto;
+  }
+}
+/* @media screen and (max-width: 320px) {
   .bestowal-Features {
     position: fixed;
     top: 5vh;
@@ -335,7 +358,7 @@
   .bestowal_navbar {
     padding: 8px 1rem;
   }
-}
+} */
 
 @media screen and (max-width: 272px) {
   .bestowal-Features {

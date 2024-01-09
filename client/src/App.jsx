@@ -1,4 +1,4 @@
-// import NavbarMainHome from "./components/navbar/NavbarMainHome";
+import NavbarMainHome from "./components/navbar/NavbarMainHome";
 import HeaderSection from "./containers/header/HeaderSection";
 import About from "./containers/about/About";
 import Features from "./containers/features/Features";
@@ -15,6 +15,8 @@ import CreateProjectAccount from './components/CreateProjectAccount';
 import ProjectAccount from "./components/ProjectAccount";
 import Hero from "./components/Hero";
 import CampaignDetailsAccount from "./pages/CampaignDetailsAccount";
+import useLocalStorage from "use-local-storage";
+
 
 
 
@@ -28,7 +30,13 @@ const App = () => {
 
   // Check If User is Logged In
   const [loaded, setLoaded] = useState(false)
+  const [myTheme, setMyTheme] = useLocalStorage("theme" ? "dark" : "light");
   
+
+  const switchTheme = () => {
+    const newTheme = myTheme === "light" ? "dark" : "light";
+    setMyTheme(newTheme);
+  };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -42,10 +50,10 @@ const App = () => {
   return (
   <>
   <PreLoader/>
-    <div className="App">
+    <div className="App" data-theme={myTheme}>
       {/* <div className="gradient__bg">
-        <NavbarMainHome />
       </div> */}
+      <NavbarMainHome switchTheme={switchTheme} />
       {loaded ? (
       <Routes>
         <Route path="/" element={<HeaderSection  />}

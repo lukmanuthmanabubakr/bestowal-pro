@@ -28,6 +28,8 @@
 
   --nav-toggler: #800080;
 
+  --scroll-bar: #2b002b;
+
   /* first section */
 
 
@@ -48,6 +50,8 @@
 
     --navbar-box-shadow: #fff;
     --nav-toggler: #fff;
+
+    --scroll-bar: #ddd;
 
     /* first section */
 
@@ -87,13 +91,17 @@
   
   /* Style for the scrollbar */
   body::-webkit-scrollbar {
-    width: 8px;
+    width: 4px;
   }
   
   body::-webkit-scrollbar-thumb {
-    background-color: var(--navbar-text-color);
+    background-color: #5e005e;
     border-radius: 3px;
-  }
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
   section {
     height: 100vh;
     margin-top: 1rem;

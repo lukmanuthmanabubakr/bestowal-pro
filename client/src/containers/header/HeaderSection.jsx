@@ -13,7 +13,7 @@ import NavbarMainHome from "../../components/navbar/NavbarMainHome"
 
 const Header = () => (
   <>
-          <NavbarMainHome />
+          {/* <NavbarMainHome /> */}
     {/* <div className="bestowal__header section__padding" id="home">
       <div className="bestowal__header-content">
         <h1 className="gradient__text">Let&apos;s us know your project idea that you have and bring it to live</h1>
@@ -40,7 +40,10 @@ const Header = () => (
   <Cta />
   <Blog />
   <Contact /> */}
-  Hello
+  
+  <section className='headerSections'>
+    
+  </section>
 </>
 
 );

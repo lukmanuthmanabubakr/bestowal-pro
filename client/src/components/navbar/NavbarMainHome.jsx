@@ -5,7 +5,6 @@ import "./navbarMainHome.css";
 import { NavLink } from "react-router-dom";
 import CustomButton from "../CustomButton";
 import { useStateContext } from "../../context";
-import useLocalStorage from "use-local-storage";
 import { RiMailCheckLine } from "react-icons/ri";
 import { TbWorldDollar } from "react-icons/tb";
 import { RiEqualizerFill } from "react-icons/ri";
@@ -13,9 +12,9 @@ import { MdGroups2 } from "react-icons/md";
 import { AiFillFund } from "react-icons/ai";
 import "./navbarMainHome.css";
 
-const NavbarMainHome = () => {
+const NavbarMainHome = ({ switchTheme }) => {
   const { connect, address } = useStateContext();
-  const [myTheme, setMyTheme] = useLocalStorage("theme" ? "dark" : "light");
+  // const [myTheme, setMyTheme] = useLocalStorage("theme" ? "dark" : "light");
   const [active, setActive] = useState("bestowal-Features");
   const [toggleIcon, setToggleIcon] = useState("nav_toggler");
 
@@ -31,13 +30,13 @@ const NavbarMainHome = () => {
       : setToggleIcon("nav_toggler");
   };
 
-  const switchTheme = () => {
-    const newTheme = myTheme === "light" ? "dark" : "light";
-    setMyTheme(newTheme);
-  };
+  // const switchTheme = () => {
+  //   const newTheme = myTheme === "light" ? "dark" : "light";
+  //   setMyTheme(newTheme);
+  // };
 
   return (
-    <nav className="bestowal_navbar" data-theme={myTheme}>
+    <nav className="bestowal_navbar">
       <div className="bestowal_logo">
         <article className="bestowals-logo">
           <NavLink to="/">
@@ -82,7 +81,7 @@ const NavbarMainHome = () => {
           </NavLink>
 
           <div className="themeModeMedia">
-            {myTheme === "light" ? (
+            {switchTheme === "light" ? (
               <MdOutlineWbSunny
                 className="sunIcon"
                 onClick={switchTheme}
@@ -106,7 +105,7 @@ const NavbarMainHome = () => {
         </article>
       </div>
       <div className="themeMode">
-        {myTheme === "light" ? (
+        {switchTheme === "light" ? (
           <MdOutlineWbSunny
             className="sunIcon"
             onClick={switchTheme}
