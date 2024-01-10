@@ -42,7 +42,10 @@ const Header = () => (
   <Contact /> */}
   
   <section className='headerSections'>
-    
+    <div className='headerImage'>
+     <h1>Hello</h1>
+  
+    </div>
   </section>
 </>
 

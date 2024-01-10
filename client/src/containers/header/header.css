@@ -1,4 +1,6 @@
-.headerSections{
-    /* background: var(--navbar-background); */
-    margin: 0;
+.headerSections {
+  /* background: var(--navbar-background); */
+}
+.headerSections h1{
+ 
 }
