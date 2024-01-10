@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 
-// User Schema Or Document Structure
+// User Schema Or Document Structuress
 const msgSchema = new mongoose.Schema({
     name : {
         type : String,
